@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Pope's Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <h1>Admin</h1>
+  <p>Upload PNGs straight into your live gallery. Nothing here is public unless you share this link.</p>
+</header>
+
+<section class="panel" id="connectPanel">
+  <h2>1. Connect to your repo</h2>
+  <div class="row">
+    <div class="field">
+      <label for="owner">GitHub username</label>
+      <input id="owner" type="text" placeholder="e.g. pope-designs">
+    </div>
+    <div class="field">
+      <label for="repo">Repository name</label>
+      <input id="repo" type="text" placeholder="e.g. portfolio">
+    </div>
+  </div>
+  <div class="field">
+    <label for="branch">Branch</label>
+    <input id="branch" type="text" value="main">
+  </div>
+  <div class="field">
+    <label for="token">Personal access token</label>
+    <input id="token" type="password" placeholder="ghp_...">
+  </div>
+  <button class="primary" id="connectBtn">Connect</button>
+  <button class="secondary" id="disconnectBtn" hidden>Disconnect</button>
+  <p class="status-line" id="connectStatus"></p>
+</section>
+
+<section class="panel" id="uploadPanel" hidden>
+  <h2>2. Add new work</h2>
+  <div class="drop-zone" id="dropZone">Click to choose PNGs, or drag them here</div>
+  <input type="file" id="fileInput" accept="image/png" multiple hidden>
+  <div class="pending-list" id="pendingList"></div>
+  <button class="primary" id="publishBtn" hidden style="margin-top:1rem;">Publish</button>
+  <p class="status-line" id="uploadStatus"></p>
+</section>
+
+<section class="panel" id="publishedPanel" hidden>
+  <h2>Published work</h2>
+  <div class="published-list" id="publishedList"></div>
+</section>
+
+<script src="admin.js"></script>
+</body>
+</html>

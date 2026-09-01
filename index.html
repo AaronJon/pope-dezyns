@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pope — Design Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1 class="wordmark">Pope</h1>
+  <p class="tagline">Design work — branding, interfaces, and illustration.</p>
+  <nav class="filters" id="filters"></nav>
+</header>
+
+<main id="gallery" class="gallery" aria-live="polite"></main>
+
+<p id="emptyState" class="empty-state" hidden>Nothing published yet.</p>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+</div>
+
+<footer class="site-footer">
+  <a href="mailto:you@example.com">you@example.com</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
